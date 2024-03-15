@@ -1,0 +1,106 @@
+
+{% extends 'base.html' %}
+
+{% block title %}Add Book{% endblock %}
+
+{% block content %}
+    <div id="alertuser"></div>
+
+    <div class="container my-3">
+      <h1>Add a Book to My Library</h1>
+      <hr />
+      <form method="POST" action="">
+        {{ form.hidden_tag() }}
+        <fieldset class="form-group">
+
+            <div class="form-group">
+                {{ form.author.label(class="form-control-label") }}
+                {{ form.author(class="form-control") }}
+            </div>
+
+            <div class="form-group">
+                {{ form.book_name.label(class="form-control-label") }}
+                {{ form.book_name(class="form-control") }}
+            </div>
+
+
+            <div class="form-group">
+                {{ form.description.label(class="form-control-label") }}
+                {{ form.description(class="form-control") }}
+            </div>
+
+
+            <div class="form-group">
+                {{ form.category.label(class="form-control-label") }}
+                {{ form.category(class="form-control") }}
+            </div>
+
+            <div class="form-group">
+                {{ form.isbn.label(class="form-control-label") }}
+                {{ form.isbn(class="form-control") }}
+            </div>
+
+            <div class="form-group">
+                {{ form.year_published.label(class="form-control-label") }}
+                {{ form.year_published(class="form-control") }}
+            </div>
+
+            <div class="form-group">
+                {{ form.publisher.label(class="form-control-label") }}
+                {{ form.publisher(class="form-control") }}
+            </div>
+
+             <div class="form-group">
+                {{ form.series.label(class="form-control-label") }}
+                {{ form.series(class="form-control") }}
+            </div>
+
+
+
+
+        </fieldset>
+          <button type="submit" class="btn btn-outline-dark">Add Book</button>
+
+      </form>
+      <table class="table table-dark my-3">
+        <thead>
+          <tr>
+            <th scope="col">Sl No.</th>
+            <th scope="col">Date of issue</th>
+            <th scope="col">Reader</th>
+            <th scope="col">Book Name</th>
+            <th scope="col">Genre</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody id="table-body"></tbody>
+      </table>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+      crossorigin="anonymous"
+    ></script>
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

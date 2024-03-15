@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}Delete a book{% endblock %}
+
+{% block content %}
+<div class ="container delete-page-container">
+    <h1>Delete a Book by Id</h1>
+    <hr/>
+
+    <form method="POST" action="">
+        {{ form.hidden_tag() }}
+        <fieldset class="form-group">
+
+            <div class="form-group">
+                {{ form.book_id.label(class="form-control-label") }}
+                {{ form.book_id(class="form-control") }}
+            </div>
+
+
+        </fieldset>
+          <button type="submit" class="btn btn-outline-dark">Delete Book</button>
+
+      </form>
+</div>
+{% endblock %}

@@ -1,0 +1,52 @@
+
+
+
+{% extends 'base.html' %}
+
+{% block title %}Library{% endblock %}
+
+{% block content %}
+<div class="container">
+   <h1>List of Books</h1>
+  <hr />
+
+
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Author</th>
+        <th>Category</th>
+        <th>Year</th>
+        <th>ISBN</th>
+        <th>Publisher</th>
+        <th>Series</th>
+        <th>Id</th>
+        <th>Cover</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      {% for result in results %}
+
+        <tr>
+          <td>{{ result[0] }}</td>
+          <td>{{ result[1] if result[1] else '' }}</td>
+          <td>{{ result[2] }}</td>
+          <td>{{ result[3] }}</td>
+          <td>{{ result[4] }}</td>
+          <td>{{ result[5] if result[5] else '' }}</td>
+          <td>{{ result[6] }}</td>
+          <td>{{ result[7] if result[7] else '' }}</td>
+          <td>{{ result[8] }}</td>
+          <td><img src="data:image/jpg;base64,{{ result[9] if result[9] else '' }}" alt="Base64-encoded Image"></td>
+        </tr>
+
+      {% endfor %}
+
+    </tbody>
+  </table>
+</div>
+
+{% endblock %}
